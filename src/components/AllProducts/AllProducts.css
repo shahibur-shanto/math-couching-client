@@ -1,0 +1,22 @@
+.image-div{
+border:1px solid yellow;
+width:200px;
+height:200px;
+background-color: aquamarine;
+}
+.image{
+    margin: 5px;
+    padding: 5px;
+    width:190px;
+    height:190px;
+}
+.cart{
+    margin:10px;
+}
+
+.price{
+    font-weight:bold;
+    font-size:20px;
+    margin-right: 20px;
+    color:olive;
+}

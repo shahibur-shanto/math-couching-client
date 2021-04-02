@@ -1,0 +1,15 @@
+.left-sidebar{
+width:20%;
+height:80vh;
+background-color: black;
+color: white;
+}
+.admin{
+    display:flex;
+}
+
+.right-sidebar{
+    width:80%;
+    height:80vh;
+}
+
