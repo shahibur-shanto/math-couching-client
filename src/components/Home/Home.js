@@ -35,12 +35,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid">
-      <div id="loading" className="d-flex justify-content-center" >
-        <div className="spinner-border" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-      
+       
       <div className="row">
         {products.map((product) => (
           <AllProducts product={product} key={product._id}></AllProducts>
