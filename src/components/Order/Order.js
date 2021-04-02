@@ -16,16 +16,16 @@ const Order = () => {
         <div>
             <h1>This is {loggedInUser.name}'s order page</h1>
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>Description</h3>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>Order Date</h3>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>Quantity</h3>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>price</h3>
                 </div>
                 
@@ -33,17 +33,17 @@ const Order = () => {
                 orders.map(order=>{
                     return(
                         <>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-3">
                     <h3>{order.name}</h3>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>{(new Date(order.date).toDateString('dd/MM/yyyy'))}</h3>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>{order.quantity}</h3>
                 </div>
                 
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-3">
                     <h3>{order.price}</h3>
                 </div>
                 
@@ -53,8 +53,8 @@ const Order = () => {
             }
             </div>
             <div className="row">
-                <div className="col-md-9"><h1>Total:</h1></div>
-                <div className="col-md-3"><h3>{orders.reduce((sum,order)=>sum+parseInt(order.price),0)}</h3></div>
+                <div className="col-md-9 col-sm-9"><h1>Total:</h1></div>
+                <div className="col-md-3 col-sm-3"><h3>{orders.reduce((sum,order)=>sum+parseInt(order.price),0)}</h3></div>
             </div>
 
         </div>

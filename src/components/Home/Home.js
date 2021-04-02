@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import AllProducts from "../AllProducts/AllProducts";
+import Loading from "../Loading/Loadering";
 import "./Home.css";
 
 const Home = () => {
 
   const [products, setProducts] = useState([]);
+  const [isLoading,setIsLoading] = useState(true)
   // const toggleSpinner = (show)=>{
   // const spinner = document.getElementById('loading');
     
@@ -23,7 +25,8 @@ const Home = () => {
     fetch(`https://enigmatic-badlands-35643.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);       
+        setProducts(data);  
+        setIsLoading(false)     
       })     
       
   }, []);
@@ -35,12 +38,14 @@ const Home = () => {
 
   return (
     <div className="container-fluid">
-       
-      <div className="row">
+       {
+         isLoading ? <Loading /> : <div className="row">
         {products.map((product) => (
           <AllProducts product={product} key={product._id}></AllProducts>
         ))}
       </div>
+       }
+      
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import firebaseConfig from '../../firebase.config';
+import './Login.css';
 // const firebase = require("firebase/app");
 // require("firebase/auth");
 import firebase from "firebase/app";
@@ -42,8 +43,8 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <h1>This is login page</h1>
+    <div className="login">
+      <h1>Please login</h1>
       <button onClick={googleSignIn} className="btn btn-primary">Sign in with Google</button>
     </div>
   );
