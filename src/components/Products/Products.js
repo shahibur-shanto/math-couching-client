@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
 import './Products.css';
 const Products = () => {
+  const history = useHistory()
     const [imageURL, setImageURL] = useState(null);
   const { register,handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -22,6 +24,8 @@ const Products = () => {
       body:JSON.stringify(eventData)
     })
     .then(res=>console.log('server side response', res))
+    window.alert('your product saved successfully');
+    history.push("/")
   };
 
   const handleImageUpload = (event) => {
