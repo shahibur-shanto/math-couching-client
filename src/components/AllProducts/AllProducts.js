@@ -12,7 +12,7 @@ const AllProducts = (props) => {
         <div className="col-md-3">
             <div className="cart">
             <div className="image-div"><img className="image" src={imageURL} alt=""/></div>
-            <h1>{name}</h1>
+            <h4>{name}</h4>
             <span className="price">${price}</span>
             <button className="btn btn-primary" onClick={()=>handleBook(_id)}>Buy Now</button>
             </div>

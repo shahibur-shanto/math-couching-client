@@ -15,6 +15,7 @@ import Admin from './components/Admin/Admin';
 import ManageProduct from './components/ManageProduct/ManageProduct';
 import BookNow from './components/BookNow/BookNow';
 import Order from './components/Order/Order';
+import SideBar from './components/SideBar/SideBar';
 
 export const UserContext = createContext();
 
@@ -41,11 +42,18 @@ function App() {
           </PrivateRoute>
           
           <Route path="/manageProduct">
+            <Header></Header>
+            <SideBar></SideBar>
             <ManageProduct></ManageProduct>
+          </Route>
+          <Route path="/addProduct">
+            <Header></Header>
+            <SideBar></SideBar>
+            <Products></Products>
           </Route>
           <PrivateRoute path="/admin">
             <Header></Header>
-            <Admin></Admin>
+            <SideBar></SideBar>
           </PrivateRoute>
           <PrivateRoute path="/order">
           <Header></Header>
